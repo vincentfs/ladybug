@@ -2042,7 +2042,7 @@ class MeshPreparation(object):
             tasks.Parallel.ForEach(xrange(len(brep)),makeMeshFromSrf)
         else:
             for i in range(len(mesh)):
-                makeMeshFromSrf(i, brep[i])
+                makeMeshFromSrf(i)
         
         return mesh
     
@@ -2070,8 +2070,8 @@ class MeshPreparation(object):
             tasks.Parallel.ForEach(xrange(len(brep)),makeMeshFromSrf)
         else:
             for i in range(len(mesh)):
-                makeMeshFromSrf(i, brep[i])
-        
+                makeMeshFromSrf(i)
+
         return mesh
 
     def parallel_testPointCalculator(self, analysisSrfs, disFromBase, parallel = True):
